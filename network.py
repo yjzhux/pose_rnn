@@ -19,7 +19,7 @@ class LSTMpred(nn.Module):
             h_n shape (n_layers, batch, hidden_size)   
             h_c shape (n_layers, batch, hidden_size)
         '''
-        # None 表示 hidden state 会用全0的 state
+        # None represents hidden state with zero initialization
         r_out, (h_n, h_c) = self.lstm(x, None) 
         model_out = self.hidden2out(r_out)
         # return outdat

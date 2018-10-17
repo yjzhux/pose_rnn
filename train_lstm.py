@@ -36,7 +36,8 @@ def main():
     # --------------------------------------------------------------------------
     # prepare dataset
     data, (len_seq, num_frame, num_joint, num_coor) = make_dataset(data_path)
-    # data[:div] for trainning, data[800:] for test
+    # data[:div] for trainning, data[800:900] for validation
+    # and the rest for testing
     train_set = data[: div1]
     val_set = data[div1 : div2]
     # train_loader shuffle

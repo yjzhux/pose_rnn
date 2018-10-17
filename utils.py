@@ -35,16 +35,4 @@ def save_checkpoint(state, is_best, filename, save_best):
     if is_best:
         shutil.copyfile(filename, save_best)  
         
-# # remember best prec@1 and save checkpoint
-# save_check = 'save/checkpoint.pth.tar'
-# save_best = 'save/model_best.pth.tar'
-# is_best = prec1 > best_prec1
-# best_prec1 = max(prec1, best_prec1)
-# print('best_prec1: ', best_prec1)
-# save_checkpoint({
-#     'epoch': epoch,
-#     'arch': 'resnet101',
-#     'state_dict': Model.state_dict(),
-#     'best_prec1': best_prec1,
-#     'optimizer' : optimizer.state_dict(),
-# }, is_best, args.save_check)      
+   
